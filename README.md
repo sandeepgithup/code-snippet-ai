@@ -2,13 +2,19 @@
 
 This project automatically generates SEO-optimized content for code snippets using OpenAI, stores them in ERPNext, and creates public-facing webpages for students.
 
+---
+
 ## 🔧 Tech Stack
+
 - ERPNext (v15)
 - Frappe Framework
 - n8n (workflow automation)
-- OpenAI (GPT-3.5/4o)
+- OpenAI (GPT-3.5 / GPT-4o)
+
+---
 
 ## 🚀 Features
+
 - Auto-generation of:
   - SEO Title
   - Meta Description
@@ -17,14 +23,22 @@ This project automatically generates SEO-optimized content for code snippets usi
 - “See on Website” button in Code Snippet Doctype
 - Scheduled n8n automation (every hour)
 
+---
+
 ## 📁 Structure
-- `code_snippet_ai/` - Frappe app
-- `api/` - Custom whitelisted methods
-- `public/js/code_snippet.js` - Client script for custom buttons
-- `integrations/n8n/` - Exported automation workflow
-- `screenshots/` - (Optional) demo UI shots
+
+code_snippet_ai/
+├── api/ # Custom whitelisted methods
+├── public/js/code_snippet.js # Client script for web links
+
+yaml
+Copy
+Edit
+
+---
 
 ## 🧪 How It Works
+
 1. Create a Code Snippet with just code
 2. n8n workflow picks it up
 3. Sends to OpenAI and stores:
@@ -32,17 +46,11 @@ This project automatically generates SEO-optimized content for code snippets usi
    - `seo_description`
    - `html_content`
 4. Creates a Web Page like `/snippets/python-loop`
-5. User can preview with “See on Website” button
+5. User can preview with the “See on Website” button
 
 ---
 
-📌 Developed by [Sandeep Ambala](https://github.com/sandeepgithup)
-
-### Code Snippet Ai
-
-AI-powered code snippet enhancer
-
-### Installation
+## 🛠 Installation
 
 You can install this app using the [bench](https://github.com/frappe/bench) CLI:
 
@@ -50,32 +58,29 @@ You can install this app using the [bench](https://github.com/frappe/bench) CLI:
 cd $PATH_TO_YOUR_BENCH
 bench get-app $URL_OF_THIS_REPO --branch develop
 bench install-app code_snippet_ai
-```
+🤝 Contributing
+This app uses pre-commit for code formatting and linting. Please install pre-commit and enable it for this repository:
 
-### Contributing
-
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
-
-```bash
+bash
+Copy
+Edit
 cd apps/code_snippet_ai
 pre-commit install
-```
+Pre-commit is configured to use the following tools:
 
-Pre-commit is configured to use the following tools for checking and formatting your code:
+ruff
 
-- ruff
-- eslint
-- prettier
-- pyupgrade
+eslint
 
-### CI
+prettier
 
-This app can use GitHub Actions for CI. The following workflows are configured:
+pyupgrade
 
-- CI: Installs this app and runs unit tests on every push to `develop` branch.
-- Linters: Runs [Frappe Semgrep Rules](https://github.com/frappe/semgrep-rules) and [pip-audit](https://pypi.org/project/pip-audit/) on every pull request.
+✅ CI (GitHub Actions)
+CI Workflow: Installs this app and runs unit tests on every push to the develop branch.
 
+Linters Workflow: Runs Frappe Semgrep Rules and pip-audit on every pull request.
 
-### License
+📄 License
+MIT
 
-mit
