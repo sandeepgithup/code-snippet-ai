@@ -14,7 +14,9 @@
   "ai_generated_content_section",
   "seo_title",
   "seo_description",
-  "html_content"
+  "html_content",
+  "html_preview",
+  "html_field"
  ],
  "fields": [
   {
@@ -68,15 +70,25 @@
   },
   {
    "fieldname": "html_content",
+   "fieldtype": "Small Text",
+   "hidden": 1
+  },
+  {
+   "fieldname": "html_preview",
    "fieldtype": "HTML",
-   "label": "html_content",
-   "read_only": 1
+   "options": "{{ doc.html_content  }}"
+  },
+  {
+   "fieldname": "html_field",
+   "fieldtype": "Long Text",
+   "hidden": 1,
+   "label": "html field"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-15 17:17:10.009880",
+ "modified": "2025-07-16 12:38:27.179191",
  "modified_by": "Administrator",
  "module": "Code Snippet Ai",
  "name": "Code Snippet",

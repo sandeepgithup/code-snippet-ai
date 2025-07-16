@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{category_name}",
  "creation": "2025-07-15 17:09:42.082746",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -19,10 +20,11 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-07-15 17:10:20.495301",
+ "modified": "2025-07-15 17:31:06.553799",
  "modified_by": "Administrator",
  "module": "Code Snippet Ai",
  "name": "Code Snippet Category",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
